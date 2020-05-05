@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@font-face {
+  font-family: Circular;
+  src: url('./assets//fonts/CircularStd-Black.ttf');
+}
+
+@font-face {
+  font-family: Circular-mid;
+  src: url('./assets//fonts/CircularStd-Medium.ttf');
+}
+
+@font-face {
+  font-family: Circular-reg;
+  src: url('./assets//fonts/CircularStd-Book.ttf');
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
