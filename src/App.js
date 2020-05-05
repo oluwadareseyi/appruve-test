@@ -26,6 +26,7 @@ const App = () => {
     res && setError(false);
 
     !res && setError(true);
+    !res && setText(false);
 
     // !res && setError(true);
   };
