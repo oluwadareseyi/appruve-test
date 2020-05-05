@@ -23,6 +23,7 @@ const App = () => {
     res && setPlan(planName);
     setSubscribeState(true);
     res && setText(true);
+    res && setError(false);
 
     !res && setError(true);
 
