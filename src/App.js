@@ -10,6 +10,7 @@ import { subscribe } from "./mockApi";
 
 const App = () => {
   const [subscribeState, setSubscribeState] = useState(false);
+  const [text, setText] = useState(false);
   const [plan, setPlan] = useState("");
   const [error, setError] = useState(true);
 
@@ -20,7 +21,10 @@ const App = () => {
   const callSubscribe = async (planName) => {
     const res = await subscribe();
     res && setPlan(planName);
-    res && setSubscribeState(true);
+    setSubscribeState(true);
+    res && setText(true);
+
+    !res && setError(true);
 
     // !res && setError(true);
   };
@@ -28,7 +32,7 @@ const App = () => {
   return (
     <div data-test="app-component" className="App">
       <Modal show={subscribeState} hide={setSubFalse}>
-        {subscribeState && (
+        {text && (
           <div className="modal-text">
             Successfully Subscribed to the {plan} plan
           </div>
